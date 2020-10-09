@@ -15,13 +15,17 @@ class LinkContainer extends React.Component {
         /*
             TODO - Create logic for setting the state to filter array and remove favLink at index
         */
+       console.log('REMOVED LINK')
+        this.setState({ favLinks: this.state.favLinks.filter(i => this.state.favLinks.indexOf(i) !== index )})
     }
 
     handleSubmit = favLink => {
         /*
             TODO - Create logic to setState and add new favLink to favLinks array in state
         */
-       this.setState({favLink: this.state.favLinks.concat(favLink)})
+       this.setState({ favLinks: this.state.favLinks.concat(favLink) })
+       console.log('LINK UP')
+       console.log(this.state.favLinks)
     }
 
     render() {
@@ -31,13 +35,12 @@ class LinkContainer extends React.Component {
                 <h1>My Favorite Links</h1>
                 <p>Add a new url with a name and link to the table.</p>
                 {/*TODO - Add Table Component */}
-                <Table linkData={this.state.favLinks}/>
-                
+                    <Table linkData={this.state.favLinks} removeLink={this.removeCharacter}/>            
                 <br/>
 
                 <h3>Add New</h3>
                 {/*TODO - Add Form Component */}
-                <Form handleSubmit={this.handleSubmit}/>
+                    <Form onSubmit={this.handleSubmit}  />
             </div>
         );
     }

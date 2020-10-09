@@ -19,7 +19,7 @@ class Form extends Component {
             TODO - Logic for changing state based on form changes
         */
        console.log("UPDATED")
-       console.log(event.target.value)
+       console.log(event.target)
        
        //changing the state
        this.setState({
