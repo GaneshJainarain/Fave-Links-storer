@@ -1,6 +1,6 @@
 import React from 'react';
-// import Table from './Table';
-// import Form from './Form';
+import Table from './Table';
+import Form from './Form';
 
 class LinkContainer extends React.Component {
     constructor(props){
@@ -33,6 +33,7 @@ class LinkContainer extends React.Component {
 
                 <h3>Add New</h3>
                 {/*TODO - Add Form Component */}
+                
             </div>
         );
     }
