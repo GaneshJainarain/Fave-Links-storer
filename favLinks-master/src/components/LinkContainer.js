@@ -6,6 +6,9 @@ class LinkContainer extends React.Component {
     constructor(props){
         super(props)
         /* TODO - Create state object for storing favLinks */
+        this.state = {
+            favLinks: []
+        }
     }
 
     removeCharacter = index => {
