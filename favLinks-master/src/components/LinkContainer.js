@@ -16,7 +16,7 @@ class LinkContainer extends React.Component {
             TODO - Create logic for setting the state to filter array and remove favLink at index
         */
        console.log('REMOVED LINK')
-        this.setState({ favLinks: this.state.favLinks.filter(i => this.state.favLinks.indexOf(i) !== index )})
+        this.setState({ favLinks: this.state.favLinks.filter(entry => this.state.favLinks.indexOf(entry) !== index )})
     }
 
     handleSubmit = favLink => {
