@@ -21,6 +21,7 @@ class LinkContainer extends React.Component {
         /*
             TODO - Create logic to setState and add new favLink to favLinks array in state
         */
+       this.setState({favLink: this.state.favLinks.concat(favLink)})
     }
 
     render() {
@@ -30,13 +31,13 @@ class LinkContainer extends React.Component {
                 <h1>My Favorite Links</h1>
                 <p>Add a new url with a name and link to the table.</p>
                 {/*TODO - Add Table Component */}
-                <Table/>
+                <Table linkData={this.state.favLinks}/>
                 
                 <br/>
 
                 <h3>Add New</h3>
                 {/*TODO - Add Form Component */}
-                <Form/>
+                <Form handleSubmit={this.handleSubmit}/>
             </div>
         );
     }
